@@ -1,20 +1,28 @@
-const elMenuLink = document.querySelectorAll('.menu__link');
-const elButton = document.querySelectorAll('.fax__top');
-elMenuLink.forEach(item => {
-	item.addEventListener('click', () => {
-		elMenuLink.forEach(i => i.classList.remove('menu__link-active'));
-		item.classList.add('menu__link-active');
+const elMenuBtn = document.querySelectorAll('.menu__link');
+const elTop = document.querySelectorAll('.fax__top');
+
+elMenuBtn.forEach(item => {
+	item.addEventListener('click', e => {
+		e.target.classList.toggle('menu__link-active');
 	});
 });
 
-elButton.forEach((e, index) => {
-	e.addEventListener('click', () => {
-		let elButtonNext = e.nextElementSibling;
-		elButton.forEach((i, index2) => {
-			if (index2 !== index) {
-				i, nextElementSibling.classList.remove('show');
-			}
-		});
-		elButtonNext.classList.toggle('show');
+//eltop
+
+elTop.forEach(item => {
+	item.addEventListener('click', e => {
+		console.log(item.nextElementSibling);
+		item.nextElementSibling.classList.toggle('visable');
+	});
+});
+
+// next
+
+const elTitle = document.querySelectorAll('.fax__title');
+
+elTop.forEach(item => {
+	item.addEventListener('click', e => {
+		console.log(item.nextElementSibling);
+		item.nextElementSibling.classList.toggle('title__img');
 	});
 });
