@@ -110,4 +110,5 @@ p {
 }
 
 .show {
+	display: inline block;
 }
